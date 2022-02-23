@@ -1,7 +1,10 @@
-// const express = require('express')
-// const app = express()
-// const port = 8000
-// const path = require('path')
+const bodyParser = require('body-parser');
+const express = require('express');
+const app = express();
+const port = 8000;
+const path = require('path');
+
+app.use(bodyParser.json());
 
 // let counter = 1;
 
@@ -20,24 +23,25 @@
 // app.get('/product', (req, res) => {
 //     res.sendFile(path.join(__dirname, './products.html'))
 // })
-// app.listen(port, () => {
-//   console.log(`Example app listening on port ${port}`)
-// })
 
-const axios = require("axios");
+const alcoholRoute = require('./routes/alcohol')(app);
 
-// Make a request for a user with a given ID
-getUser();
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`);
+});
 
-async function getUser() {
-  try {
-    const response = await axios.get("https://api.punkapi.com/v2/beers");
-    console.log(response);
-  } catch (error) {
-    console.error(error);
-    }
-    
-    console.log("Testing");
-}
+// const axios = require("axios");
 
+// // Make a request for a user with a given ID
+// getUser();
 
+// async function getUser() {
+//   try {
+//     const response = await axios.get("https://api.punkapi.com/v2/beers");
+//     console.log(response);
+//   } catch (error) {
+//     console.error(error);
+//     }
+
+//     console.log("Testing");
+// }
