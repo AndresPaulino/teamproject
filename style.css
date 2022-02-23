@@ -1,0 +1,159 @@
+:root {
+  --galada: 'Galada', cursive;
+  --lobster: 'Lobster', cursive;
+  --montserrat: 'Montserrat', sans-serif;
+  --ubuntu: 'Ubuntu', sans-serif;
+}
+
+body {
+  margin: 1% 7%;
+  background-color: #d4cdab;
+  width: auto;
+  height: 50rem;
+}
+
+/* Navbar */
+.container-fluid {
+  padding: 0;
+  background-color: #d4cdab;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-brand {
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: var(--lobster);
+}
+
+.nav-item {
+  font-weight: bold;
+  font-family: var(--montserrat);
+  margin: 0 2%;
+}
+
+.nav-link:hover{
+    color: white;
+}
+
+.p {
+  color: #93c0a4;
+}
+
+/* Sign In Buttons */
+
+.log-in,
+.sign-in {
+  width: 100px;
+  margin: 0 5px;
+}
+
+.log-in {
+  background-color: #dce2bd;
+  border: solid black 1px;
+}
+
+.log-in:hover {
+    background-color: #93c0a4;
+    color: white;
+}
+
+.sign-in:hover {
+    background-color: #93c0a4;
+}
+
+.btn-outline-dark {
+  background-color: #93c0a4;
+}
+
+.btn {
+  font-family: var(--ubuntu);
+}
+
+/* Hero */
+.hero {
+  border-radius: 25px;
+  background: #dce2bd;
+  padding: 20px;
+  height: 300px;
+  position: relative;
+  background-image: url('https://images.pexels.com/photos/995686/pexels-photo-995686.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.75;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-text {
+  font-size: 3rem;
+  font-family: var(--ubuntu);
+  color: #fff;
+  margin: 0% 0 0 5%;
+  width: 50%;
+}
+
+#hero-p {
+  margin: 0;
+  padding: 0;
+}
+
+#hero-happy {
+  font-family: var(--lobster);
+}
+
+/* Search Bar */
+.search {
+  margin: 3% 20%;
+  background-color: #fff;
+  top: 70%;
+  width: 100%;
+  z-index: 1;
+  padding: 10px;
+  border-radius: 25px;
+  box-shadow: #50514f;
+}
+
+.search-bar {
+  display: inline-flex;
+  width: 100%;
+}
+
+.search-btn {
+  display: inline-block;
+}
+
+/* Cards */
+
+.card-deck {
+    margin: 3% 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.card {
+    width: 25%;
+    margin: 0 10px;
+}
+
+@media (max-width: 1000px){
+    .card {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 780px){
+    .card {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
