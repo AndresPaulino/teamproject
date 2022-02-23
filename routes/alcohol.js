@@ -1,5 +1,3 @@
-const { get } = require('express/lib/response');
-
 module.exports = function (app) {
   let alcohol = [
     {
@@ -47,7 +45,23 @@ module.exports = function (app) {
     res.send(data);
   });
     
-    app.delete('/alcohol:id', (req, res) => [
-        let id = req.
-    ])
+  app.delete('/alcohol/:id', (req, res) => {
+    let id = req.params.id;
+
+    let found = false;
+
+    for (let i = 0; i < alcohol.length;  i++) {
+      if (alcohol[i].name === id) {
+        found = true;
+        alcohol.splice(i, 1);
+      }
+    }
+
+    if (found) {
+      res.send('Deleted');
+    } else {
+      res.send('Drink not found');
+    }
+
+  });
 };
